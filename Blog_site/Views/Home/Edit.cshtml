@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Assignment03.Models.Post
+
+<form method="post" style="margin-left: 20%; background-color: white; margin-top: 20px; padding: 20px; width: 50%; display: block;" asp-action="Edit">
+    <label>Name:</label><br />
+    <input asp-for="Name" type="text" placeholder="Name" readonly /><br />
+    <label>Title:</label><br />
+    <input asp-for="Title" type="text" placeholder="Title" /><br />
+    <label>Content:</label><br />
+    <textarea asp-for="Content" class="form-control" aria-label="With textarea"></textarea><br />
+
+    <button type="submit" class="btn btn-outline-dark">POST</button>
+
+</form>

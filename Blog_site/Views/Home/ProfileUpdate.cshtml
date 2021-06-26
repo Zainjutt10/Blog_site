@@ -1,0 +1,32 @@
+﻿@model Assignment03.Models.Login
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="updateuser">
+    <img style="height:100px;width:100px" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" />
+    <h1 style="text-align:center">@Model.Name</h1>
+    <h3 style="margin-left:10px">Profile</h3>
+    <form method="post" class="update" asp-action="ProfileUpdate">
+
+        <div class="inp">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" id="Name1" aria-describedby="NameHelp" asp-for="Name" placeholder="Enter Name">
+        </div>
+        <div class="inp">
+            <label for="exampleInputPassword1"> Email</label>
+            <input type="email" id="exampleInputPassword1" placeholder="Enter Email" asp-for="email" required>
+
+        </div>
+        <div class="inp">
+            <label for="exampleInputPassword1"> Old Password</label>
+            <input type="password" id="exampleInputPassword1" placeholder="Old Password" required>
+
+        </div>
+        <div class="inp">
+            <label for="exampleInputPassword1"> New Password</label>
+            <input type="password" id="exampleInputPassword1" asp-for="Password" placeholder="New Password" required>
+        </div>
+        <button asp-route-id="@Model.id" type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

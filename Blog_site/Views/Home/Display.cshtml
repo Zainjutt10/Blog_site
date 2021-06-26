@@ -1,0 +1,23 @@
+﻿@model List<Assignment03.Models.Post>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <a asp-action="Post"><button type="button" class="btn btn-primary">Create Post</button></a>
+    <div class="container">
+        @foreach (Assignment03.Models.Post p in Model)
+        {
+            <div class="row" style="padding:inherit;margin-bottom:20px">
+                <img style="height:100px;width:100px" src="@Url.Content(@p.imgsrc)" alt="usericon" />
+                <div class="info" >
+                    
+                        <h6>@p.Name</h6>
+                        <a asp-action="Update" asp-route-id="@p.id"><h5>@p.Title</h5></a>
+                        <p>@p.Content</p>
+                   
+                </div>
+            </div>
+        }
+    </div>
+</div>

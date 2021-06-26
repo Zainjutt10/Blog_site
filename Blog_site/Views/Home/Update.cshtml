@@ -1,0 +1,22 @@
+﻿@model Assignment03.Models.Post
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="edit" style="margin-left:20%; background-color:white; padding:20px; width:50%">
+    
+        <div class="row" style="padding:inherit;margin-bottom:20px">
+            <img src="@Model.imgsrc" style="height:100px;width:100px" alt="usericon" />
+            <div class="info">
+                <h6>@Model.Name</h6>
+                <h5>@Model.Title</h5>
+                <p>@Model.Content</p>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-info">Update</a>
+                    <a asp-action="Remove" asp-route-id="@Model.id"  class="btn btn-danger">Remove</a>
+                </div>
+            </div>
+            
+        </div>
+    
+</div>

@@ -1,0 +1,19 @@
+﻿@using Assignment03.Models
+@model Post
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="post">
+    <h4>Create Post</h4>
+    <form method="post" asp-action="Post">
+        <label>Name:</label><br />
+        <input asp-for="Name" type="text" placeholder="Name" /><br />
+        <label>Title:</label><br />
+        <input asp-for="Title" type="text" placeholder="Title" /><br />
+        <label>Content:</label><br />
+        <textarea asp-for="Content" class="form-control" aria-label="With textarea"></textarea><br />
+
+        <button type="submit" class="btn btn-outline-dark">POST</button>
+
+    </form>
+</div>
